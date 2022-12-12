@@ -1,6 +1,4 @@
 import qlib as q
-import qlib.data.dataset
-from qlib.data import D
 from qlib.contrib.data.handler import Alpha158, DataHandlerLP
 
 
@@ -17,7 +15,7 @@ class Alpha158TwoWeeks(Alpha158):
         return ["Ref($close, -10)/Ref($close, -1) - 1"], ["LABEL0"]
 
 
-q.init(provider_uri='~/.qlib/qlib_data/cn_data_1min')
+q.init(provider_uri='stockData/cn_data_1min')
 
 instruments = 'csi300'
 start_time = '2020-12-01 09:00:00'
